@@ -1,0 +1,13 @@
+C:\Sviluppo\GitProjects\Shopify.Kazuma\bin\Debug\net8.0\Shopify.Kazuma.deps.json
+C:\Sviluppo\GitProjects\Shopify.Kazuma\bin\Debug\net8.0\Shopify.Kazuma.dll
+C:\Sviluppo\GitProjects\Shopify.Kazuma\bin\Debug\net8.0\Shopify.Kazuma.pdb
+C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net8.0\Shopify.Kazuma.csproj.AssemblyReference.cache
+C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net8.0\Shopify.Kazuma.GeneratedMSBuildEditorConfig.editorconfig
+C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net8.0\Shopify.Kazuma.AssemblyInfoInputs.cache
+C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net8.0\Shopify.Kazuma.AssemblyInfo.cs
+C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net8.0\Shopify.Kazuma.csproj.CoreCompileInputs.cache
+C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net8.0\Shopify.Kazuma.sourcelink.json
+C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net8.0\Shopify.Kazuma.dll
+C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net8.0\refint\Shopify.Kazuma.dll
+C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net8.0\Shopify.Kazuma.pdb
+C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net8.0\ref\Shopify.Kazuma.dll

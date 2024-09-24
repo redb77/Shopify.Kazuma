@@ -24,7 +24,7 @@ namespace Shopify.Domain.Customer
         /// number
         /// </summary>
         [FirestoreProperty]
-        public long customerId { get; set; }
+        public string customerId { get; set; }
             /// <summary>
             /// string or null <email>
             /// </summary>

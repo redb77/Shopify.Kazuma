@@ -66,7 +66,7 @@ namespace Shopify.DataManager
         {
             var collection = _firestoreDb.Collection(_collectionNameCustomer);
             var snapshot = await collection.GetSnapshotAsync();
-            Query query = collection.WhereEqualTo("customerId", long.Parse(id));
+            Query query = collection.WhereEqualTo("customerId", id);
             QuerySnapshot querySnapshot = await query.GetSnapshotAsync();
 
             if (querySnapshot.Documents.Count > 0)

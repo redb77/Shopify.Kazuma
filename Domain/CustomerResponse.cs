@@ -11,7 +11,8 @@ namespace Shopify.Domain.Customer
     [FirestoreData]
     public class CustomerResponse : Error
     {
-
+        [FirestoreDocumentId]
+        public string customerFBId { get; set; }
         /// <summary>
         /// customerToken
         /// </summary>
@@ -20,7 +21,7 @@ namespace Shopify.Domain.Customer
         /// <summary>
         /// number
         /// </summary>
-        [FirestoreDocumentId]
+        [FirestoreProperty]
         public string customerId { get; set; }
         /// <summary>
         /// string or null <email>
