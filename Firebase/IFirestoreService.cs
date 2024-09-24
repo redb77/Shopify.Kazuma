@@ -12,6 +12,7 @@ namespace Shopify.DataManager
 
 
         public Task AddAsync(CustomerResponse customerResponse);
+        public Task UpdateAsync(CustomerResponse customer);
         public Task<CustomerResponse> GetCustomer(string id);
         public Task<List<CustomerResponse>> GetAll();
 

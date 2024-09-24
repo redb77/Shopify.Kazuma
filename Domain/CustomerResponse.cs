@@ -104,7 +104,7 @@ namespace Shopify.Domain.Customer
     public class Points
     {
         public CardType CardType { get; set; }
-        public float pointsBalance { get; set; }
+        public int pointsBalance { get; set; }
     }
     /// <summary>
     /// Current customer tier

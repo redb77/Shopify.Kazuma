@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Google.Cloud.Firestore;
+using Newtonsoft.Json;
 using Shopify.Admin.Domain;
 using Shopify.Domain.Customer;
+using System.Dynamic;
 
 namespace Shopify.DataManager
 {
@@ -120,6 +122,21 @@ namespace Shopify.DataManager
             var shoeDocument = ConvertModelToDocument(customer);
 
             await collection.AddAsync(shoeDocument);
+        }
+        public async Task UpdateAsync(CustomerResponse customer)
+        {
+            DocumentReference docref = _firestoreDb.Collection(_collectionNameCustomer).Document(customer.customerFBId);
+            DocumentSnapshot snap = await docref.GetSnapshotAsync();
+
+            var serializedParticipant = JsonConvert.SerializeObject(customer);
+            var deserializedParticipant = JsonConvert.DeserializeObject<ExpandoObject>(serializedParticipant);
+
+           
+            if (snap.Exists)
+            {
+                //setting the document
+                await docref.UpdateAsync(deserializedParticipant);
+            }
         }
 
         private static CustomerResponse ConvertDocumentToModel(CustomerDocument customerDocument)
