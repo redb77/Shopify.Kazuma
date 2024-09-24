@@ -10,3 +10,4 @@ C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net6.0\Shopify.Kazuma.dll
 C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net6.0\refint\Shopify.Kazuma.dll
 C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net6.0\Shopify.Kazuma.pdb
 C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net6.0\ref\Shopify.Kazuma.dll
+C:\Sviluppo\GitProjects\Shopify.Kazuma\obj\Debug\net6.0\Shopify.Kazuma.sourcelink.json

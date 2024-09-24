@@ -5,7 +5,7 @@
     <version>1.0.0</version>
     <authors>Shopify.Kazuma</authors>
     <description>Package Description</description>
-    <repository type="git" />
+    <repository type="git" commit="67b2c739ce04392392343c4749519ef8c01002f5" />
     <dependencies>
       <group targetFramework="net6.0">
         <dependency id="AutoMapper" version="13.0.1" exclude="Build,Analyzers" />
