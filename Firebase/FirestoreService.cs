@@ -3,6 +3,9 @@ using Google.Cloud.Firestore;
 using Newtonsoft.Json;
 using Shopify.Admin.Domain;
 using Shopify.Domain.Customer;
+using Shopify.Domain.Loyalty;
+using ShopifySharp;
+using ShopifySharp.GraphQL;
 using System.Dynamic;
 
 namespace Shopify.DataManager
@@ -73,8 +76,10 @@ namespace Shopify.DataManager
 
             if (querySnapshot.Documents.Count > 0)
             {
-                var customer = querySnapshot.Documents.SingleOrDefault()!.ConvertTo<CustomerResponse>();
-
+                var customerDocument = querySnapshot.Documents.SingleOrDefault()!.ConvertTo<CustomerDocument>();
+                var customer = ConvertDocumentToModel(customerDocument);
+                customer.customerFBId = customerDocument.customerFBId;
+                
                 return customer;
             }
             else
@@ -127,11 +132,19 @@ namespace Shopify.DataManager
         {
             DocumentReference docref = _firestoreDb.Collection(_collectionNameCustomer).Document(customer.customerFBId);
             DocumentSnapshot snap = await docref.GetSnapshotAsync();
-
-            var serializedParticipant = JsonConvert.SerializeObject(customer);
+            var customerDocument = ConvertModelToDocument( customer);
+            var serializedParticipant = JsonConvert.SerializeObject(customerDocument);
             var deserializedParticipant = JsonConvert.DeserializeObject<ExpandoObject>(serializedParticipant);
-
-           
+            try
+            {
+                var xxx = docref.UpdateAsync(deserializedParticipant).Result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+            
             if (snap.Exists)
             {
                 //setting the document
@@ -142,7 +155,16 @@ namespace Shopify.DataManager
         private static CustomerResponse ConvertDocumentToModel(CustomerDocument customerDocument)
         {
             var customerResponse = new CustomerResponse();
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<CustomerDocument, CustomerResponse>());
+
+            var config = new MapperConfiguration(
+   cfg => {
+       cfg.CreateMap<CustomerDocument,CustomerResponse >();
+       cfg.CreateMap<PointsDocument,Points>();
+       cfg.CreateMap<CardTypeDocument,CardType>();
+       cfg.CreateMap<DiscountCodeDocument,DiscountCode>();
+   });
+
+            
             IMapper mapper = new Mapper(config);
 
             customerResponse = mapper.Map<CustomerResponse>(customerDocument);
@@ -152,8 +174,14 @@ namespace Shopify.DataManager
         private static CustomerDocument ConvertModelToDocument(CustomerResponse customer)
         {
             var customerDocument = new CustomerDocument();
-
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<CustomerResponse, CustomerDocument>());
+            var config = new MapperConfiguration(
+    cfg => {
+        cfg.CreateMap<CustomerResponse, CustomerDocument>();
+        cfg.CreateMap<Points, PointsDocument>();
+        cfg.CreateMap<CardType, CardTypeDocument>();
+        cfg.CreateMap<DiscountCode, DiscountCodeDocument>();
+    });
+            //var config = new MapperConfiguration(cfg => cfg.CreateMap<CustomerResponse, CustomerDocument>());
             IMapper mapper = new Mapper(config);
 
             customerDocument = mapper.Map<CustomerDocument>(customer);

@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Sviluppo\\GitProjects\\Shopify.Kazuma\\Shopify.Kazuma.csproj": {
-      "version": "2.5.0",
+      "version": "2.6.0",
       "restore": {
         "projectUniqueName": "C:\\Sviluppo\\GitProjects\\Shopify.Kazuma\\Shopify.Kazuma.csproj",
         "projectName": "Shopify.Kazuma",
@@ -70,6 +70,10 @@
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.21.0, )"
+            },
+            "ShopifySharp": {
+              "target": "Package",
+              "version": "[6.18.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

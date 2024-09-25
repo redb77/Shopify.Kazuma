@@ -1,5 +1,6 @@
 ﻿using Google.Cloud.Firestore;
 using Shopify.Domain.Loyalty;
+using ShopifySharp;
 
 namespace Shopify.Domain.Customer
 {
@@ -60,26 +61,18 @@ namespace Shopify.Domain.Customer
         /// </summary>
         [FirestoreProperty]
         public List<Points>? points { get; set; }
-        /// <summary>
-        /// number
-        /// </summary>
-        [FirestoreProperty]
-        public float? pointsBalance { get; set; }
-        /// <summary>
-        /// string or null <date-time>
-        /// </summary>
-        [FirestoreProperty]
-        public DateTime? pointsExpiresAt { get; set; }
+
+
         /// <summary>
         /// Is the customer allowed to earn tier
         /// </summary>
         [FirestoreProperty]
         public bool? isAllowedToEarnTier { get; set; }
-        /// <summary>
-        /// Current customer tier
-        /// </summary>
-        [FirestoreProperty]
-        public Currenttier? currentTier { get; set; }
+        ///// <summary>
+        ///// Current customer tier
+        ///// </summary>
+        //[FirestoreProperty]
+        //public Currenttier? currentTier { get; set; }
         /// <summary>
         /// Is referral program available for the customer?
         /// </summary>
@@ -100,21 +93,42 @@ namespace Shopify.Domain.Customer
         /// </summary>
         [FirestoreProperty]
         public bool? acceptsSmsMarketing { get; set; }
+
+        /// <summary>
+        /// Array of discount codes
+        /// </summary>
+        [FirestoreProperty]
+        public List<DiscountCode>? discountCodes { get; set; }
     }
+    [FirestoreData]
     public class Points
     {
+        /// <summary>
+        /// Obejct Card Type
+        /// </summary>
+        [FirestoreProperty]
         public CardType CardType { get; set; }
+
+        /// <summary>
+        /// Card type points
+        /// </summary>
+        [FirestoreProperty]
         public int pointsBalance { get; set; }
+        /// <summary>
+        /// string or null <date-time>
+        /// </summary>
+        [FirestoreProperty]
+        public DateTime? pointsExpiresAt { get; set; }
     }
-    /// <summary>
-    /// Current customer tier
-    /// </summary>
-    public class Currenttier
-    {
-        public int? id { get; set; }
-        public string? title { get; set; }
-        public string? image { get; set; }
-        public DateTime? achievedAt { get; set; }
-    }
+    ///// <summary>
+    ///// Current customer tier
+    ///// </summary>
+    //public class Currenttier
+    //{
+    //    public int? id { get; set; }
+    //    public string? title { get; set; }
+    //    public string? image { get; set; }
+    //    public DateTime? achievedAt { get; set; }
+    //}
 
 }

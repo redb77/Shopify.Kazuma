@@ -13,6 +13,11 @@
         /// <summary>
         /// number of points calculated on the minimum cost amount
         /// </summary>
-        public int points { get; set; } 
+        public int points { get; set; }
+
+        /// <summary>
+        /// name of the card
+        /// </summary>
+        public string name{ get; set; }
     }
 }

@@ -1,5 +1,8 @@
-﻿namespace Shopify.Domain.Loyalty
+﻿using Google.Cloud.Firestore;
+
+namespace Shopify.Domain.Loyalty
 {
+    [FirestoreData]
     public enum enumCardType
     {
         Red = 32406,
