@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Shopify.Domain.Customer;
 using Shopify.Domain.Loyalty;
-using ShopifySharp;
 
 namespace Shopify.BusinessLogic
 {
@@ -19,10 +18,10 @@ namespace Shopify.BusinessLogic
             CreateMap<CardType, CardTypeDocument>();
             CreateMap<CardTypeDocument, CardType>();
 
-            
+
 
             CreateMap<ShopifySharp.DiscountCode, DiscountCodeDocument>();
-            CreateMap<DiscountCodeDocument, DiscountCode>();
+            CreateMap<DiscountCodeDocument, Domain.Customer.DiscountCode>();
 
             CreateMap<Shopify.Domain.ShopifyStoreFront.Customer, Shopify.Domain.Customer.CustomerResponse>();
         }

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Shopify.Kazuma</id>
-    <version>3.0.0</version>
+    <version>3.1.0</version>
     <authors>Shopify.Kazuma</authors>
     <description>Package Description</description>
     <repository type="git" commit="e57bfc38b617b73f20eedfc24120bc061bd990ae" />

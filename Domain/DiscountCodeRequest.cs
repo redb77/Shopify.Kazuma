@@ -6,6 +6,10 @@
     public class DiscountCodeRequest
     {
         /// <summary>
+        /// customer identifier
+        /// </summary>
+        public string CustomerIdentifier { get; set; }
+        /// <summary>
         /// discount code
         /// </summary>
         public string DiscountCode { get; set; }

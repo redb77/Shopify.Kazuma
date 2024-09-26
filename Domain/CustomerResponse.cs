@@ -1,6 +1,6 @@
 ﻿using Google.Cloud.Firestore;
 using Shopify.Domain.Loyalty;
-using ShopifySharp;
+
 
 namespace Shopify.Domain.Customer
 {
@@ -100,6 +100,14 @@ namespace Shopify.Domain.Customer
         [FirestoreProperty]
         public List<DiscountCode>? discountCodes { get; set; }
     }
+    public class DiscountCode
+    {
+        public string Amount { get; set; }
+        public string Code { get; set; }
+        public long RuleId { get; set; }
+    }
+
+
     [FirestoreData]
     public class Points
     {

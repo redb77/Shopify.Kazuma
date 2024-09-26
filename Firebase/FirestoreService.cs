@@ -4,8 +4,7 @@ using Newtonsoft.Json;
 using Shopify.Admin.Domain;
 using Shopify.Domain.Customer;
 using Shopify.Domain.Loyalty;
-using ShopifySharp;
-using ShopifySharp.GraphQL;
+
 using System.Dynamic;
 
 namespace Shopify.DataManager
@@ -62,6 +61,9 @@ namespace Shopify.DataManager
             var collection = _firestoreDb.Collection(_collectionLogOperation);
             await collection.AddAsync(operationalLog);
         }
+
+
+
         /// <summary>
         /// Recupera i punti di un cliente
         /// </summary>

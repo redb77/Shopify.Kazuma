@@ -144,7 +144,11 @@ namespace Shopify.Domain.Customer
         /// </summary>
         [FirestoreProperty]
         public string Code { get; set; }
-
+        /// <summary>
+        /// The discount code.
+        /// </summary>
+        [FirestoreProperty]
+        public long RuleId { get; set; }
     }
 
 

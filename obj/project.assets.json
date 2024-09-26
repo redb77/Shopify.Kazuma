@@ -2126,7 +2126,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "3.0.0",
+    "version": "3.1.0",
     "restore": {
       "projectUniqueName": "C:\\Sviluppo\\GitProjects\\Shopify.Kazuma\\Shopify.Kazuma.csproj",
       "projectName": "Shopify.Kazuma",
