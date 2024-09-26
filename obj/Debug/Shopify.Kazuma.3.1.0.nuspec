@@ -5,7 +5,7 @@
     <version>3.1.0</version>
     <authors>Shopify.Kazuma</authors>
     <description>Package Description</description>
-    <repository type="git" commit="7d24e637bce9b1c0cc5a58ed22307a6284475b30" />
+    <repository type="git" commit="5f3ecd98cb2da2c6e5c09dd6cfe56fd0a0f72767" />
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="AutoMapper" version="13.0.1" exclude="Build,Analyzers" />
@@ -19,6 +19,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="C:\Sviluppo\GitProjects\Shopify.Kazuma\bin\Debug\net8.0\Shopify.Kazuma.dll" target="lib\net8.0\Shopify.Kazuma.dll" />
+    <file src="C:\Users\luca\source\repos\redb77\Shopify.Kazuma\bin\Debug\net8.0\Shopify.Kazuma.dll" target="lib\net8.0\Shopify.Kazuma.dll" />
   </files>
 </package>
