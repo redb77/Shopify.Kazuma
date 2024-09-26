@@ -100,10 +100,23 @@ namespace Shopify.Domain.Customer
         [FirestoreProperty]
         public List<DiscountCode>? discountCodes { get; set; }
     }
+    [FirestoreData]
     public class DiscountCode
     {
+        /// <summary>
+        /// discount amount
+        /// </summary>
+        [FirestoreProperty]
         public string Amount { get; set; }
+        /// <summary>
+        /// discount code
+        /// </summary>
+        [FirestoreProperty]
         public string Code { get; set; }
+        /// <summary>
+        /// Ruleid
+        /// </summary>
+        [FirestoreProperty]
         public long RuleId { get; set; }
     }
 
