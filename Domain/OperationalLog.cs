@@ -1,12 +1,20 @@
-﻿namespace Shopify.Admin.Domain
+﻿using Google.Cloud.Firestore;
+
+namespace Shopify.Admin.Domain
 {
+    [FirestoreData]
     public class OperationalLog
     {
+        [FirestoreDocumentId]
         public string Id { get; set; }
+        [FirestoreProperty]
         public string InternalUserId { get; set; }
+        [FirestoreProperty]
         public string OperationType { get; set; }
+        [FirestoreProperty]
         public eOperationOrigin OperationOrigin { get; set; }
     }
+    [FirestoreData]
     public enum eOperationOrigin
     {
         APP=1,
