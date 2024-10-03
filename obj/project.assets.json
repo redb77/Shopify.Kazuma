@@ -2126,11 +2126,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-<<<<<<< HEAD
-    "version": "3.2.0",
-=======
     "version": "3.3.0",
->>>>>>> 291d4352673357871f9ccf3730d63b4f5d34bd94
     "restore": {
       "projectUniqueName": "C:\\Sviluppo\\GitProjects\\Shopify.Kazuma\\Shopify.Kazuma.csproj",
       "projectName": "Shopify.Kazuma",
@@ -2226,6 +2222,12 @@
     }
   },
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Sviluppo\\GitProjects\\Shopify.Kazuma\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1803",
       "level": "Warning",

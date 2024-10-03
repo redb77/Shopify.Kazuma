@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "svmpNF8qhys=",
-=======
   "dgSpecHash": "8AabuK+8avw=",
->>>>>>> 291d4352673357871f9ccf3730d63b4f5d34bd94
   "success": true,
   "projectFilePath": "C:\\Sviluppo\\GitProjects\\Shopify.Kazuma\\Shopify.Kazuma.csproj",
   "expectedPackageFiles": [
@@ -55,6 +51,12 @@
     "C:\\Users\\luca.rollo\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Sviluppo\\GitProjects\\Shopify.Kazuma\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1803",
       "level": "Warning",

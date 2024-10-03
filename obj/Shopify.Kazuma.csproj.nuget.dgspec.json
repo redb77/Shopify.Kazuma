@@ -4,13 +4,8 @@
     "C:\\Sviluppo\\GitProjects\\Shopify.Kazuma\\Shopify.Kazuma.csproj": {}
   },
   "projects": {
-<<<<<<< HEAD
-    "C:\\Users\\luca\\source\\repos\\redb77\\Shopify.Kazuma\\Shopify.Kazuma.csproj": {
-      "version": "3.2.0",
-=======
     "C:\\Sviluppo\\GitProjects\\Shopify.Kazuma\\Shopify.Kazuma.csproj": {
       "version": "3.3.0",
->>>>>>> 291d4352673357871f9ccf3730d63b4f5d34bd94
       "restore": {
         "projectUniqueName": "C:\\Sviluppo\\GitProjects\\Shopify.Kazuma\\Shopify.Kazuma.csproj",
         "projectName": "Shopify.Kazuma",
