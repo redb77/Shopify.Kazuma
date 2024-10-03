@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "Shopify.Kazuma/3.1.0": {
+      "Shopify.Kazuma/3.3.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
           "FirebaseAdmin": "3.0.1",
@@ -411,7 +411,7 @@
     }
   },
   "libraries": {
-    "Shopify.Kazuma/3.1.0": {
+    "Shopify.Kazuma/3.3.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
