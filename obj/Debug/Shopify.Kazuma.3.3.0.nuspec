@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Shopify.Kazuma</id>
-    <version>3.2.0</version>
+    <version>3.3.0</version>
     <authors>Shopify.Kazuma</authors>
     <description>Package Description</description>
     <repository type="git" commit="3c47bdde084f930146b159902c40fc22bb6255e7" />
@@ -19,10 +19,6 @@
     </dependencies>
   </metadata>
   <files>
-<<<<<<< HEAD
-    <file src="C:\Users\luca\source\repos\redb77\Shopify.Kazuma\bin\Debug\net8.0\Shopify.Kazuma.dll" target="lib\net8.0\Shopify.Kazuma.dll" />
-=======
     <file src="C:\Sviluppo\GitProjects\Shopify.Kazuma\bin\Debug\net8.0\Shopify.Kazuma.dll" target="lib\net8.0\Shopify.Kazuma.dll" />
->>>>>>> 291d4352673357871f9ccf3730d63b4f5d34bd94
   </files>
 </package>
