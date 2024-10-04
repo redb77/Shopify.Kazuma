@@ -133,6 +133,8 @@ namespace Shopify.Domain.Customer
     [FirestoreData]
     public class DiscountCodeDocument
     {
+        [FirestoreProperty]
+        public DateTime pointsExpiresAt { get; set; }
         /// <summary>
         /// The amount of the discount.
         /// </summary>
