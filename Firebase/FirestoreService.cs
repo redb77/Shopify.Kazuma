@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using Shopify.Admin.Domain;
 using Shopify.Domain.Customer;
 using Shopify.Domain.Loyalty;
-
+using Shopify.Kazuma.Domain;
 using System.Dynamic;
 
 namespace Shopify.DataManager
@@ -18,6 +18,7 @@ namespace Shopify.DataManager
         private const string _collectionInternalUser = "internal.user";
         private const string _collectionLogOperation = "operationalLogs";
         private const string _collectionNameCustomer = "Customers";
+        private const string _collectionCurrentVersion = "currentversion";
         /// <summary>
         /// Costruttore
         /// </summary>
@@ -51,6 +52,21 @@ namespace Shopify.DataManager
                 return null;
             }
         }
+
+        /// <summary>
+        /// Retrive last app version
+        /// </summary>
+        /// <returns></returns>
+        public async Task<VersionInfo> GetCurrentVersion()
+        {
+            var collection = _firestoreDb.Collection(_collectionCurrentVersion);
+            var snapshot = await collection.GetSnapshotAsync();
+
+
+            var currentVersion = snapshot.Documents.Select(s => s.ConvertTo<VersionInfo>()).ToList().SingleOrDefault();
+            return currentVersion;
+        }
+
         /// <summary>
         /// Inserisci i log di esecuzione di una operazione
         /// </summary>

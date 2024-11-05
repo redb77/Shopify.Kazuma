@@ -1,5 +1,6 @@
 ﻿using Shopify.Admin.Domain;
 using Shopify.Domain.Customer;
+using Shopify.Kazuma.Domain;
 
 namespace Shopify.DataManager
 {
@@ -15,6 +16,6 @@ namespace Shopify.DataManager
         public Task UpdateAsync(CustomerResponse customer);
         public Task<CustomerResponse> GetCustomer(string id);
         public Task<List<CustomerResponse>> GetAll();
-
+        public Task<VersionInfo> GetCurrentVersion();
     }
 }
