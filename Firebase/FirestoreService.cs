@@ -66,6 +66,27 @@ namespace Shopify.DataManager
             var currentVersion = snapshot.Documents.Select(s => s.ConvertTo<VersionInfo>()).ToList().SingleOrDefault();
             return currentVersion;
         }
+        public async Task<bool> CheckVersion(string version)
+        {
+            var collection = _firestoreDb.Collection(_collectionCurrentVersion);
+            var snapshot = await collection.GetSnapshotAsync();
+            var currentVersion = snapshot.Documents.Select(s => s.ConvertTo<VersionInfo>()).ToList().SingleOrDefault();
+            var lastVer = int.Parse(currentVersion!.version.Replace(".", string.Empty));
+            var customerVer = int.Parse(version.Replace(".", string.Empty));
+            if (lastVer > customerVer)
+            {
+                return false;
+            }
+            else if (currentVersion.forceDownload)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+           
+        }
 
         /// <summary>
         /// Save last app version
