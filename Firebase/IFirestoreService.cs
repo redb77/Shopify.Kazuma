@@ -17,5 +17,6 @@ namespace Shopify.DataManager
         public Task<CustomerResponse> GetCustomer(string id);
         public Task<List<CustomerResponse>> GetAll();
         public Task<VersionInfo> GetCurrentVersion();
+        public Task SaveCurrentVersion(VersionInfo version);
     }
 }

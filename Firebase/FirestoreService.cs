@@ -68,6 +68,15 @@ namespace Shopify.DataManager
         }
 
         /// <summary>
+        /// Save last app version
+        /// </summary>
+        /// <returns></returns>
+        public async Task SaveCurrentVersion(VersionInfo version)
+        {
+            var collection = _firestoreDb.Collection(_collectionCurrentVersion);
+            await collection.AddAsync(version);
+        }
+        /// <summary>
         /// Inserisci i log di esecuzione di una operazione
         /// </summary>
         /// <param name="operationalLog"></param>
