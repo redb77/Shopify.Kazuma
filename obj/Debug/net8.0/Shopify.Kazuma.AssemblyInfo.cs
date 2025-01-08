@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shopify.Kazuma")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("4.2.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("4.2.0.0+41251faa923d2b00307c5a81f94e912a57f729d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("4.2.0.0+ad7a14a5286f3bfe00cdd6b722607d91cb03bd4c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shopify.Kazuma")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shopify.Kazuma")]
 [assembly: System.Reflection.AssemblyVersionAttribute("4.2.0.0")]
