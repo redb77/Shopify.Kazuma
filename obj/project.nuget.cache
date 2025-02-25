@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tiS4SikABXU=",
+  "dgSpecHash": "Kpwx68Af6T8=",
   "success": true,
   "projectFilePath": "C:\\Sviluppo\\GitProjects\\Shopify.Kazuma\\Shopify.Kazuma.csproj",
   "expectedPackageFiles": [
@@ -50,12 +50,5 @@
     "C:\\Users\\luca.rollo\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\luca.rollo\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1803",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://10.10.4.147:8081/repository/nuget-hosted/'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
-    }
-  ]
+  "logs": []
 }
